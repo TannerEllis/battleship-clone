@@ -1,5 +1,6 @@
-// The displayMessage method takes a string message and displays it in the message area
-
+// The displayMessage method takes a string message and displays it in the message area.
+// The displayHit method takes a string location and updates the class of a <td> to display a correct guess.
+// The displayMiss method takes a string location and updates the class of a <td> to display an incorrect guess.
 const view = {
     
     displayMessage: function(message){
@@ -15,10 +16,12 @@ const view = {
     displayMiss: function(location){
         var cell = document.getElementById(location);
         cell.setAttribute('class', 'miss')
-    }
-    
+    }  
 }
 
+//The model object is used to maintain the state of the game and provide some logic for the game.
+/* The fire method is what turns a player's guess into a hit or a miss. 
+*/
 const model = {
     boardSize: 7,
     numShips: 3,
